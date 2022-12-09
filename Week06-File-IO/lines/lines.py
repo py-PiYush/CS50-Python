@@ -30,3 +30,4 @@ for line in file:
         line_count += 1
 
 print(line_count)
+file.close()
