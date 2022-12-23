@@ -4,13 +4,13 @@ The first thing program does is asking user for their name.
 ========= Welcome Screen =============
 - "Welcome to Minesweeper" written fancily using pyfiglet library
 - Program will greet user using pyttsx3 module 
-- Will display all command line arguments and their usages 
+- Will display all commands and their usages 
 
 ========= Instructions ==============
-Usage: python project.py -i
-- In a different file instructions.py, write logic to display game instructions on the terminal
+Command: i
+-  write program to display game instructions on the terminal
 
 ========= High Score =====================
-Usage: python project.py -s
+Command: h
 - In a file call score.py, write program to store User's name and time taken to solve minesweeper in a csv file
-- Read from csv file and display 5 high scores
+- Read from csv file and display 5 high scores.
