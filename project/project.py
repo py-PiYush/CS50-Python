@@ -11,10 +11,10 @@ def main():
     Main function: get user's name
     """
     player = input("Enter your name: ").strip()
-    command = welcome(player).lower()
+    command = welcome(player)
     if command == "g":
-        print("play game")
-        # game(args[1])
+        # print("play game")
+        game()
     elif command == "i":
         print("instructions")
         # print(instructions())
@@ -49,7 +49,7 @@ def welcome(player):
 
     # Get command
     while True:
-        command = input("Command: ").strip()
+        command = input("Command: ").strip().lower()
         if command in ["i", "g", "s"]:
             break
         else:
@@ -72,7 +72,23 @@ def game():
     """
     Simulates Minesweeper game
     """
-    pass
+    print("========= DIFFICULTY =============")
+    print("e for Easy: 8x8 with 10 mines")
+    print("m for Medium: 16x16 with 40 mines")
+    print("h for Hard: 30x16 with 99 mines\n")
+    while True:
+        mode = input("Enter difficulty mode: ")
+        if mode in ["e", "m", "h"]:
+            break
+        else:
+            print("\n\033[31mInvalid\033[39m")
+    if mode == "e":
+        row, col, mines = 8, 8, 10
+    elif mode == "m":
+        row, col, mines = 16, 16, 40
+    elif mode == "h":
+        row, col, mines = 30, 16, 99
+    # play(row, col, mines)
 
 
 def display_usages():
