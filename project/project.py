@@ -67,7 +67,7 @@ def instructions():
     print("Uncover a cell by entering row,col")
     print("If you enter values corresponding to a mine, you lost the game")
     print("Number on the cell indicates how many mines surround that cell")
-    print("Use this as clue to mark a possible mine by entering row,col,m")
+    print("Use this as clue to keep an eye on possible mines")
 
 
 def store_score(time, player):
