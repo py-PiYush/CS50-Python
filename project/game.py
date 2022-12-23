@@ -92,7 +92,8 @@ class Board:
             return True
         # If number of surrounding mines is 0: recursively open all surrounding cells
         for r in range(max(0, row - 1), min(row + 2, self.dim_row)):
-            for c in range(max(0, col - 1), max(col + 2, self.dim_col)):
+            for c in range(max(0, col - 1), min(col + 2, self.dim_col)):
+                self.player_board[r][c] = self.colored(self.board[r][c])
                 if (r, c) in self.visited:
                     continue
                 self.dig(r, c)
