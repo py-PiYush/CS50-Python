@@ -42,9 +42,9 @@ def welcome(player):
     print()
 
     # Text to speech
-    # engine = pyttsx3.init()
-    # engine.say(f"Hello {player}, welcome to minesweeper")
-    # engine.runAndWait()
+    engine = pyttsx3.init()
+    engine.say(f"Hello {player}, welcome to minesweeper")
+    engine.runAndWait()
 
     # Display command line usages
     display_usages()
@@ -83,7 +83,7 @@ def get_high_scores():
     with open("scores.csv", "r") as file:
         reader = csv.DictReader(file)
         top5 = []
-        for row in sorted(reader, key=lambda x: x["time"], reverse=True)[:5]:
+        for row in sorted(reader, key=lambda x: float(x["time"]))[:5]:
             top5.append({"name": row["name"], "time": row["time"]})
     return top5
 
