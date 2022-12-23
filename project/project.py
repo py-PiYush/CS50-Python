@@ -72,6 +72,12 @@ def instructions():
 
 def store_score(time, player):
     """Store time taken by user in csv file"""
+    # Create file if doesn't exists
+    if not os.path.exists("scores.csv"):
+        with open("scores.csv", "w") as f:
+            f.write("name,time")
+
+    # Write score to the file
     with open("scores.csv", "a") as file:
         fieldnames = ["name", "time"]
         writer = csv.DictWriter(file, fieldnames=fieldnames)
