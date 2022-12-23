@@ -16,14 +16,12 @@ def main():
     player = input("Enter your name: ").strip()
     command = welcome(player)
     if command == "g":
-        # print("play game")
         time = game()
         store_score(time, player)
     elif command == "i":
-        print("instructions")
-        # print(instructions())
+        instructions()
     else:
-        print("\033[33m=== HIGH SCORES ===\033[39m")
+        print("\033[33m=== HIGH SCORES ===\033[39m\n")
         scores = get_high_scores()
         for score in scores:
             print(f"{score['name']}: {score['time']} seconds")
@@ -64,7 +62,12 @@ def welcome(player):
 
 def instructions():
     """Shows instructions to play game"""
-    pass
+    print("\033[33m===== INSTRUCTIONS =====\033[39m\n")
+    print("Objective: Uncover all cells but avoid mines.")
+    print("Uncover a cell by entering row,col")
+    print("If you enter values corresponding to a mine, you lost the game")
+    print("Number on the cell indicates how many mines surround that cell")
+    print("Use this as clue to mark a possible mine by entering row,col,m")
 
 
 def store_score(time, player):
