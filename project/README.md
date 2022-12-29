@@ -4,9 +4,9 @@ An adaptation of the popular Minesweeper game on command-line.
 
 <hr>
 
-#### Video Demo:
+#### Video Demo: [https://youtu.be/ye-vOuNljFY](https://youtu.be/ye-vOuNljFY)
 
-#### Decription
+#### Description
 
 ========= Getting Player's Name =========
 
